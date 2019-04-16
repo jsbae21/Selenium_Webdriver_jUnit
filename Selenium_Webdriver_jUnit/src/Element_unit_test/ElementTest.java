@@ -4,16 +4,16 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.By;
 import static org.junit.Assert.*;
-import org.junit.AfterClass;
-import org.junit.BeforeClass;
+import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
 
 public class ElementTest {
 	
 	static WebDriver driver;
 	
-	@BeforeClass
-	public static void setUp()
+	@Before
+	public void setUp()
 	{
 		driver = new ChromeDriver();
 		driver.get("http://cookbook.seleniumacademy.com/DoubleClickDemo.html");
@@ -65,9 +65,10 @@ public class ElementTest {
 		System.out.println("Css_background1 success");
 	}
 	
-	@AfterClass
-	public static void tearDown()
+	@After
+	public void tearDown()
 	{
-		driver.close();
+		driver.quit();
 	}
+
 }
