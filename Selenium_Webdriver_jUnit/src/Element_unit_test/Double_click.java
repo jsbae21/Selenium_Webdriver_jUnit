@@ -21,7 +21,6 @@ public class Double_click {
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("http://cookbook.seleniumacademy.com/DoubleClickDemo.html");
-		System.out.println("Before success");
 	}
 	
 	@Test
